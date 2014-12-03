@@ -72,59 +72,7 @@ function ab2str(buf) {
   return String.fromCharCode.apply(null, new Uint16Array(buf));
 }
 
-/*function onReceive(info){
-  count++;\r\n\r\n
-  console.log('result received');
-  var infoo=info;
-  var request;
-  if (info.socketId != socketId)
-    return;
-  // info.data is an arrayBuffer.
-  var data = String.fromCharCode.apply(null, new Uint8Array(infoo.data));
-  var x = data.charAt(0);
-  //sendResponse({message:data});
-  console.log(x);
-  if(x == "*" && count == 1){
-    request ='1 login unhostedcse unhostedcse12345\r\n\r\n';
-    _stringToArrayBuffer(request, function(sentData){
-           console.log(sentData);
-           console.log('login data sending..')
-            chrome.sockets.tcp.send(socketId, sentData, function(sendInfo){
-                        console.log(socketId);
-                        console.log(sendInfo.resultCode);
-                        console.log(sendInfo);
-                        
-                    });     
-                   chrome.sockets.tcp.setPaused(socketId, false); 
-        });
-  }else if(x == "1" && count == 2){
-      request = 'a1 select inbox\r\n\r\n';
-      _stringToArrayBuffer(request, function(sentData){
-           console.log(sentData);
-            console.log('select data sending..')
-            chrome.sockets.tcp.send(socketId, sentData, function(sendInfo){
-                        console.log(socketId);
-                        console.log(sendInfo.resultCode);
-                        console.log(sendInfo);
-                        
-                    });     
-                   chrome.sockets.tcp.setPaused(socketId, false); 
-        });
-  }else {}
 
-  
-console.log(data);
-chrome.sockets.tcp.getSockets(function(socketInfos){
-  for(var i=0;i<socketInfos.length;i++){
-     console.log(socketInfos[i].socketId);
-    if(socketId == socketInfos[i].socketId){
-      console.log(socketInfos[i].paused);
-      console.log(socketInfos[i].connected);
-    }
-  }
-});
-
-}*/
 
 function onReceive(info){
   console.log('result received');
