@@ -1,0 +1,24 @@
+{
+  "name": "CLIENTMail!",
+  "description": "Chrome App for TCP connection",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["js/background.js"]
+    }
+    
+    },
+    "externally_connectable": {
+      "matches": ["http://localhost/FeatherMailbox/*"]
+    },
+   "sockets":{
+      "tcp":{
+        "connect": ""//imap.gmail.com:993
+      }
+   },
+   "permissions": [
+      "http://127.0.0.1/*"
+   ],
+  "icons": { "16": "img/green_circle.png", "128": "img/red_circle.png" }
+}
