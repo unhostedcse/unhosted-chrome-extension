@@ -10,16 +10,15 @@
     
     },
     "externally_connectable": {
-      "matches": ["http://localhost/unhosted-webmail-client/*"]
+      "matches": ["http://localhost/FeatherMailbox/*"]
     },
    "sockets":{
       "tcp":{
-        "connect": ""
+        "connect": ""//imap.gmail.com:993
       }
    },
    "permissions": [
       "http://127.0.0.1/*"
    ],
   "icons": { "16": "img/green_circle.png", "128": "img/red_circle.png" }
-
 }
