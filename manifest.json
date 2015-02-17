@@ -1,7 +1,8 @@
 {
   "name": "CLIENTMail!",
   "description": "Chrome App for TCP connection",
-  "version": "0.1",
+  "version": "0.1 ",
+	
   "manifest_version": 2,
   "app": {
     "background": {
@@ -9,8 +10,8 @@
     }
     
     },
-    "externally_connectable": {
-      "matches": ["http://localhost/unhosted-webmail-client/*"]
+    "externally_connectable": {      
+	"matches": ["http://localhost/unhosted-webmail-clientV2/*"]
     },
    "sockets":{
       "tcp":{
