@@ -1,7 +1,7 @@
 {
-  "name": "CLIENTMail!",
+  "name": "Unhosted Mail",
   "description": "Chrome App for TCP connection",
-  "version": "0.1 ",
+  "version": "1.1",
 	
   "manifest_version": 2,
   "app": {
@@ -21,6 +21,6 @@
    "permissions": [
       "http://127.0.0.1/*"
    ],
-  "icons": { "16": "img/green_circle.png", "128": "img/red_circle.png" }
+  "icons": { "16": "img/icon_16.png", "128": "img/icon_128.png" }
 
 }
