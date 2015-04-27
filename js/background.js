@@ -23,10 +23,17 @@ chrome.runtime.onMessageExternal.addListener(
         {
             this.command = request.command;
             sendResponseBack = sendResponse;
+            console.log(request.actionEvt);	
+	    if (request.actionEvt == "test_connect") {
+		sendResponse({message:"test_connect_pass",id:0});
+		return;
+	    }
+	
             this.command = JSON.parse(this.command);
+
             this.request=request;
             server=request;
-            //this.ssl = request.settings
+            //this.ssl = request.settings	
 
             console.log(request.actionEvt);
             console.log(request.conID);
@@ -38,7 +45,7 @@ chrome.runtime.onMessageExternal.addListener(
                     console.log(socketId);
                     tcp_sockets[conID] = new TCP_Socket(socketId, conID);
                     console.log("length: " + tcp_sockets.length);
-                    //console.log(tcp_sockets[conID].socket);  
+                    //console.log(tcp_sockets[conID].socket);  		
 
                     if (request.actionEvt == "connect") {
                         var connectObj = JSON.parse(request.settings);

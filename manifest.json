@@ -1,7 +1,7 @@
 {
   "name": "Unhosted Mail",
   "description": "Chrome App for TCP connection",
-  "version": "1.1",
+  "version": "1.1.2",
 	
   "manifest_version": 2,
   "app": {
@@ -11,7 +11,7 @@
     
     },
     "externally_connectable": {      
-	"matches": ["http://localhost/unhosted-webmail-clientV2/*"]
+	"matches": ["http://localhost/*","http://unhostedcse.github.io/*","http://unhosted.projects.uom.lk/*"]
     },
    "sockets":{
       "tcp":{
